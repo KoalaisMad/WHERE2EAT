@@ -1,8 +1,77 @@
-I'm koalaaaaa ... You can't defeat me!
+Case Study 4: The 2019 Capital One Data Breach
+Overview: In July 2019, Capital One, one of the largest financial institutions in the U.S., suffered a significant data breach due to a cloud security vulnerability. Over 100 million customer accounts were compromised, exposing sensitive personal information such as names, addresses, credit scores, and social security numbers. The breach was particularly notable because it involved a misconfigured firewall in Capital One's cloud infrastructure on Amazon Web Services (AWS), allowing unauthorized access to the data.
 
-Now I'm going to teach you about CNNs. CNNs are convolutional neural networks ....
-These are really effective in analyzing images and they treat and entire image as a single flat list of numbers and compare relationships among these numbers.
+This breach exemplifies a security issue that did not exist before the widespread adoption of cloud computing and the Internet. Read Capital One's explanation here: https://www.capitalone.com/digital/facts2019/
 
-CNNs are boring let's move to RNNs.
+Key Factors Leading to the Breach:
+Cloud Misconfiguration: The root cause of the breach was a misconfigured web application firewall (WAF) that allowed a hacker to exploit a vulnerability in Capital One’s cloud environment. The firewall was intended to block suspicious traffic, but the misconfiguration allowed the hacker to access sensitive data stored in the cloud.
 
-Ignore RNNs, let's go switch to Transformers directly...
+Unauthorized Access via Internet: The hacker, a former AWS employee, exploited the vulnerability remotely using specialized knowledge of AWS’s cloud infrastructure. Before the era of cloud computing and internet-based data storage, this kind of remote attack on centralized data storage would not have been possible.
+
+Insufficient Security Audits: Despite being hosted on AWS, Capital One did not adequately monitor or audit its cloud configurations, allowing the misconfiguration to go unnoticed. Security practices that were traditionally more robust in on-premises environments (where companies had more direct control over their infrastructure) did not fully adapt to the cloud-based environment, leading to this oversight.
+
+Key Cloud Security Issues Exposed:
+Shared Responsibility Model: Cloud providers, such as AWS, operate under a "shared responsibility model," where they manage the security of the cloud infrastructure, but the customer (Capital One) is responsible for securing the data they store on the cloud. Misunderstandings or lack of clarity regarding these roles can lead to security gaps, as with Capital One's misconfigured firewall.
+
+Increased Attack Surface: Before cloud computing, data was often stored in isolated, on-premise systems with limited access. Cloud computing, however, introduces a much larger attack surface since data is accessible from anywhere via the internet. While this convenience improves scalability, it also creates more potential entry points for attackers, as seen in the Capital One case.
+
+Data Centralization in the Cloud: With the rise of cloud-based storage, vast amounts of sensitive data are stored in centralized locations managed by third-party providers. This makes cloud systems highly attractive targets for hackers, as a single vulnerability can expose massive amounts of data. In contrast, before the internet era, data breaches typically affected smaller, more isolated data sets.
+
+Complex Cloud Security Configurations: Managing security in the cloud requires a sophisticated understanding of various tools and settings, from encryption and firewall settings to identity and access management. In Capital One’s case, a simple misconfiguration led to one of the most significant breaches in history. Pre-internet infrastructure, with more physical controls and centralized systems, presented fewer layers of complexity for securing data.
+
+Read the case study from MIT about this breach here: https://cams.mit.edu/wp-content/uploads/capitalonedatapaper.pdf
+
+Outcome:
+U.S. regulators fined Capital One $80 million and filed numerous class-action lawsuits. The breach also highlighted the importance of adequately securing cloud environments and the need for companies to regularly audit and review their cloud security configurations.
+
+Conclusion:
+The Capital One data breach highlights a cloud security issue that wouldn't have existed before the widespread adoption of the internet and cloud computing. In a pre-internet world, data would typically be stored on-premises, with access strictly controlled and physical barriers limiting unauthorized access. However, in the cloud era, data is accessible from anywhere, and simple configuration errors can lead to catastrophic breaches. This case underscores the importance of understanding cloud-specific security challenges and properly implementing security protocols in cloud environments.
+
+
+All Members read and discussed this case study.
+We did not all read and discuss this.
+
+
+Q3 Key Factors 
+Describe in more detail the Cloud Misconfiguration issue:
+The firewall of a Capital One web application, which was meant to detect and block suspicious activity, was misconfigured and allowed unauthorized access to the backend server. This issue should have been detected by Capital One through proper security checks and audits. However, the attacker exploited this vulnerability in the web application firewall to gain access to sensitive user information stored in AWS cloud storage. The attack was later identified as a Server-Side Request Forgery (SSRF) attack, where the server is tricked into performing tasks or executing requests on behalf of a remote user. This allowed the attacker to gain unauthorized access to internal infrastructure. Moreover, the compromised server had a highly privileged role within the AWS environment, which enabled the attacker to obtain security credentials. Using these credentials, the attacker was then able to access the AWS S3 buckets associated with the compromised Capital One account.
+Q4 Key Cloud Security Issues:
+Question 4.1 Shared Responsibility Model
+Describe how the Shared Responsibility Model was part of the issue. (Sophia)
+The shared responsibility model means that cloud providers like Amazon Web Services are responsible for securing the underlying infrastructure (like hardware, networking, and data centers), while customers like Capital One are responsible for securing their own data, configurations, and access controls within the cloud.  In the Capital One breach, AWS was not compromised. Capital One misconfigured its web application firewall, which is part of the customer’s responsibility. The misconfiguration allowed the attacker to exploit the system and access sensitive data. The issue occurred because Capital One did not properly implement or monitor its cloud security settings, highlighting a misunderstanding or failure to uphold its role in the shared responsibility model. 
+Question 4.2 Increased Attack Surface:
+What is meant by Increased Attack Surface?  How was this an issue? (Sophia)
+Increased attack surface refers to the greater number of potential entry points that attackers can exploit in a system. In cloud environments, systems are accessible over the internet, APIs are exposed, and configurations are more complex. All of these aspects expand the number of vulnerabilities. In the Capital One case, the attack surface was significantly larger because their cloud infrastructure was internet facing. The misconfigured firewall created an exposed entry point that the attacker could reach remotely. Unlike traditional on premises systems (which normally require physical or internal network access), the cloud allows the attacker to exploit the vulnerability from anywhere. This expanded attack surface made it easier for a single configuration mistake to lead to a massive data breach. 
+Q5 Outcome
+Was the outcome fair?  Describe in detail your thoughts on responsibility for these types of issues.
+We personally don’t believe that the outcome was fair because Capital One bore the whole responsibility and also wasn’t fined enough for the amount of trust the generic public puts into them. Furthermore, the amount  of people the breach affected and the size of Capital One doesn’t equate to the amount of fine Capital One paid.
+Capital One failed to properly secure its cloud configuration, didn’t detect the breach quickly and exposed highly sensitive data such as SSNs and credit info. A good outcome should include security improvements and protection of customer data with stronger audits. Furthermore, the penalty was only given to the attacker and Capital One, however the complexity of the cloud by AWS does play some level of influence on the data breach. 
+
+Q6 Predict
+Predict how you would prevent this in the future if you were hired by one of the companies involved. (Sophia)
+If we were hired by Capital One, we would focus on preventing this type of breach through stronger cloud security practices and automation. First we would implement automated configuration monitoring and alerts. Tools should continuously scan for misconfiguration (like incorrect firewall or IAM settings) and immediately flag or fix them. This reduces the risk of human error going unnoticed. We would also enforce the principle of least privilege across all access controls. Every service, user, and role should only have the minimum permissions necessary. In this case, restricting access to sensitive data and metadata services could have prevented the attacker from gaining higher level access. In addition, we would introduce regular security audits and penetration testing, specifically tailored to cloud environments. This includes simulating attacks on web application firewalls and reviewing all cloud configurations to catch vulnerabilities early. Additionally, we would improve logging and real time monitoring. By using centralized logging and anomaly detection, suspicious activity (like unusual data access patterns) could be detected and stopped much earlier. Finally, we would ensure better developer and engineer training on the shared responsibility model, especially when using Amazon Web Services. Many cloud breaches are due to misconfigurations, so improving awareness and best practices is critical. 
+
+Q7 MIT Case Study
+From the MIT Case study paper, read and discuss the following issues. Use specific examples from the paper.
+
+Question 7.1 Compliance vs. Reality Gap
+The paper argues that existing cybersecurity frameworks (such as NIST) were not sufficient in practice to prevent the Capital One breach.
+
+Based on the case study, explain why compliance and regulatory frameworks did not prevent the incident, and identify at least two specific gaps between policy and implementation.
+Compliance and regulatory frameworks did not prevent the incident; there is a difference between having a framework and actually implementing it. The paper notes that frameworks could have mitigated the breach, but because Capital One did not properly implement and monitor it, the incident still happened. Any enforcement and validation of the controls outlined by NIST frameworks were insufficient. Cloud-specific risks were also not fully integrated, as Capital One migrated to AWS but failed to adapt risk assessment processes to cloud environments. This is one of the gaps between policy and implementation: access was not managed securely as IAM roles were over-permissioned. The breach also went undetected for months and was only discovered externally (from an outsider), violating the policy of continuous monitoring.
+Question 7.2 Chain of Failure (Technical + Control Breakdown)
+The Capital One breach involved multiple steps, including an SSRF attack, a misconfigured WAF, credential access, and data exfiltration.
+
+Explain how multiple small failures combined into a large-scale breach, and identify which step you believe was the most critical failure point and why.
+
+Steps of failure: SSRF vulnerability, misconfigured WAF, access to AWS metadata, overpermissioned IAM role, lack of monitoring, data exfiltration
+Each small failure might not be catastrophic alone, but by forming a complete kill chain, it allowed for each step to snowball into a large-scale breach. The SSRF vulnerability and the WAF misconfiguration allowed the attacker to trick the server and firewall, gaining access to temporary credentials. These credentials then allowed the attacker to run commands in the AWS environment, which then returned sensitive data/buckets.
+We argue that the most critical failure point was the overpermissioned IAM credentials; even though the SSRF and WAF misconfiguration provided access, IAM permissions actually allowed attackers to access metadata and exfiltrate massive datasets. Being able to have these credentials allowed the breach to grow into a large-scale incident, as access allowed for full data exposure.
+Question 7.3 Cloud Responsibility & Misconceptions
+Capital One was an early and advanced adopter of cloud technologies, yet the breach still occurred.
+
+Based on the paper, discuss what this case reveals about the shared responsibility model in cloud computing, and explain what responsibilities remained with Capital One rather than the cloud provider.
+
+In cloud computing, the provider (in this case, AWS) is responsible for the security of the underlying cloud architecture (infrastructure, platform, core services) while the client (Capital One) is responsible for the security within the cloud, or data stored via security control configuration, IAM, application security, and monitoring/detection. There was no evidence of any failures on the provider side, as the physical infrastructure was unaffected; all of the issues listed in the paper were from customer-side failures rather than provider. Clients often overrely on providers for security without properly considering their own responsibilities. This case study showed that the shared responsibility model requires clear ownership of responsibility.
+
+
