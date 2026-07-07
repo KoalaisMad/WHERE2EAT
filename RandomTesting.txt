@@ -1,8 +1,3 @@
-Case Study 4: The 2019 Capital One Data Breach
-Overview: In July 2019, Capital One, one of the largest financial institutions in the U.S., suffered a significant data breach due to a cloud security vulnerability. Over 100 million customer accounts were compromised, exposing sensitive personal information such as names, addresses, credit scores, and social security numbers. The breach was particularly notable because it involved a misconfigured firewall in Capital One's cloud infrastructure on Amazon Web Services (AWS), allowing unauthorized access to the data.
-
-This breach exemplifies a security issue that did not exist before the widespread adoption of cloud computing and the Internet. Read Capital One's explanation here: https://www.capitalone.com/digital/facts2019/
-
 
 ooohhh lalaaaa
 
