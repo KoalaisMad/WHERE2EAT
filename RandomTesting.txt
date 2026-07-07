@@ -2,3 +2,5 @@ I'm koalaaaaa ... You can't defeat me!
 
 Now I'm going to teach you about CNNs. CNNs are convolutional neural networks ....
 These are really effective in analyzing images and they treat and entire image as a single flat list of numbers and compare relationships among these numbers.
+
+CNNs are boring let's move to RNNs.
