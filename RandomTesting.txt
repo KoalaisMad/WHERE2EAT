@@ -4,6 +4,8 @@ Overview: In July 2019, Capital One, one of the largest financial institutions i
 This breach exemplifies a security issue that did not exist before the widespread adoption of cloud computing and the Internet. Read Capital One's explanation here: https://www.capitalone.com/digital/facts2019/
 
 
+ooohhh lalaaaa
+
 Key Cloud Security Issues Exposed:
 Shared Responsibility Model: Cloud providers, such as AWS, operate under a "shared responsibility model," where they manage the security of the cloud infrastructure, but the customer (Capital One) is responsible for securing the data they store on the cloud. Misunderstandings or lack of clarity regarding these roles can lead to security gaps, as with Capital One's misconfigured firewall.
 
