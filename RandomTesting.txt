@@ -1,1 +1,3 @@
 I'm koalaaaaa ... You can't defeat me!
+
+Now I'm going to teach you about CNNs. CNNs are convolutional neural networks ....
