@@ -3,12 +3,6 @@ Overview: In July 2019, Capital One, one of the largest financial institutions i
 
 This breach exemplifies a security issue that did not exist before the widespread adoption of cloud computing and the Internet. Read Capital One's explanation here: https://www.capitalone.com/digital/facts2019/
 
-Key Factors Leading to the Breach:
-Cloud Misconfiguration: The root cause of the breach was a misconfigured web application firewall (WAF) that allowed a hacker to exploit a vulnerability in Capital One’s cloud environment. The firewall was intended to block suspicious traffic, but the misconfiguration allowed the hacker to access sensitive data stored in the cloud.
-
-Unauthorized Access via Internet: The hacker, a former AWS employee, exploited the vulnerability remotely using specialized knowledge of AWS’s cloud infrastructure. Before the era of cloud computing and internet-based data storage, this kind of remote attack on centralized data storage would not have been possible.
-
-Insufficient Security Audits: Despite being hosted on AWS, Capital One did not adequately monitor or audit its cloud configurations, allowing the misconfiguration to go unnoticed. Security practices that were traditionally more robust in on-premises environments (where companies had more direct control over their infrastructure) did not fully adapt to the cloud-based environment, leading to this oversight.
 
 Key Cloud Security Issues Exposed:
 Shared Responsibility Model: Cloud providers, such as AWS, operate under a "shared responsibility model," where they manage the security of the cloud infrastructure, but the customer (Capital One) is responsible for securing the data they store on the cloud. Misunderstandings or lack of clarity regarding these roles can lead to security gaps, as with Capital One's misconfigured firewall.
