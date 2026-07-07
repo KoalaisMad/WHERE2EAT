@@ -1,5 +1,5 @@
 
-ooohhh lalaaaa
+
 
 Key Cloud Security Issues Exposed:
 Shared Responsibility Model: Cloud providers, such as AWS, operate under a "shared responsibility model," where they manage the security of the cloud infrastructure, but the customer (Capital One) is responsible for securing the data they store on the cloud. Misunderstandings or lack of clarity regarding these roles can lead to security gaps, as with Capital One's misconfigured firewall.
