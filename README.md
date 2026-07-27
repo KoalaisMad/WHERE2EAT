@@ -126,6 +126,7 @@ WHERE2EAT/
 ## Contributing
 
 Feel free to submit issues and enhancement requests!
+don't commit useless stuff.
 
 ## License
 
