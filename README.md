@@ -1,4 +1,4 @@
-=# WHERE2EAT
+# WHERE2EAT
 
 A web application that helps you find the perfect restaurant based on your preferences, location, budget, time constraints, and dietary restrictions.
 
@@ -122,6 +122,8 @@ WHERE2EAT/
 ├── README.md            # This file
 └── .gitignore           # Git ignore rules
 ```
+
+2+2 =4 
 
 ## Contributing
 
