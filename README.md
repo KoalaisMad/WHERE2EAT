@@ -126,7 +126,7 @@ WHERE2EAT/
 └── .gitignore           # Git ignore rules
 ```
 There are plenty of cookies for everyone.
-2+2 =4 
+Mickey brought them.
 
 ## Contributing
 
