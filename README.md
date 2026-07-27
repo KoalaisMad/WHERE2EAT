@@ -2,7 +2,7 @@
 
 A web application that helps you find the perfect restaurant based on your preferences, location, budget, time constraints, and dietary restrictions.
  
-more cookies, oh no the cookies are all gone.
+more cookies, oh no the cookies are all gone. the cookie monster ate them.
 ## Features
 
 - **Location-based search**: Uses GPS or manual zipcode entry to find nearby restaurants
