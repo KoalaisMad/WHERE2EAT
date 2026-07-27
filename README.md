@@ -15,7 +15,7 @@ more cookies, oh no the cookies are all gone. the cookie monster ate them.
 - **Random selection**: Randomly picks from restaurants that match your criteria
 - **Google Maps integration**: Get directions directly to your selected restaurant
 - **Multiple options**: View all matching restaurants or pick another random option
-new cookies, wait no cookies. none
+new cookies, wait no cookies. none new
 ## Setup
 
 ### Prerequisites
