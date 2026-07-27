@@ -1,7 +1,8 @@
 # WHERE2EAT
 
 A web application that helps you find the perfect restaurant based on your preferences, location, budget, time constraints, and dietary restrictions.
-
+ 
+more cookies
 ## Features
 
 - **Location-based search**: Uses GPS or manual zipcode entry to find nearby restaurants
