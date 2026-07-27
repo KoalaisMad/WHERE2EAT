@@ -16,6 +16,8 @@ more cookies, oh no the cookies are all gone. the cookie monster ate them.
 - **Google Maps integration**: Get directions directly to your selected restaurant
 - **Multiple options**: View all matching restaurants or pick another random option
 new cookies, wait no cookies. none new
+
+happy monday
 ## Setup
 
 ### Prerequisites
