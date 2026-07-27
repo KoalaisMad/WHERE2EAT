@@ -1,4 +1,4 @@
-# WHERE2EAT
+=# WHERE2EAT
 
 A web application that helps you find the perfect restaurant based on your preferences, location, budget, time constraints, and dietary restrictions.
 
@@ -129,4 +129,4 @@ Feel free to submit issues and enhancement requests!
 
 ## License
 
-there is a fish in the glass. Mickey placed the fish there.
+There are a ton of good fish.
